@@ -1,0 +1,158 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+}
+
+#sidebar {
+    height: 100%;
+    opacity: 0.9;
+    position: absolute;
+    min-width: 250px;
+    max-width: 250px;
+    margin-left: -250px;
+    background: $primary;
+    color: #fff;
+    z-index: 2;
+
+    &.transition {
+        transition: all 0.3s;
+    }
+
+    &.active {
+        margin-left: 0;
+    }
+
+    a[data-toggle="collapse"] {
+        position: relative;
+    }
+
+    a, a:hover, a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: rotate(90deg);
+    }
+
+    ul p {
+        color: #fff;
+        padding: 10px;
+    }
+    
+    ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+    }
+
+    ul li a:hover {
+        color: $white;
+        background: $cyan;
+    }
+    
+    ul li.active > a {
+        color:$white;
+        background: $red;
+    }
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+}
+
+.navbar {
+    background-color: $primary;
+}
+
+.navbar-brand, .navbar-brand:hover {
+    color: $white;
+}
+
+#navbarDropdown {
+    color: $white;
+}
+
+#navbarDropdown:hover, #navbarDropdown:visited {
+    background: $primary;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        height: calc(100% - 107px);
+    }
+}
+
+@media (min-width: 768px) {
+    #sidebar {
+        height: calc(100% - 54px);
+    }
+}
+
+@media (min-width: 200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 100%;
+    }
+}
+
+.navbar-dark { 
+    .navbar-toggler {
+        color: $white;
+        border: 1px solid $white;
+    }
+
+    .navbar-nav .nav-link {
+        color: $white;
+    }
+}
+
+.sidebar-toggler {
+    margin-right: 0px;
+    padding: 0 1rem;
+    background-color: $primary;
+}
+
+#content {
+    width: 100%;
+    padding: 30px 40px;
+    z-index: 1;
+}
+
+.js-color-picker-label {
+    padding: 7px 1px;
+}
+
+.dashboard-icon {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.btn-outline-primary {
+    width: 100%;
+}
